@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<h1> Look at the console Fool</h1>
+
+	<h1 id="display"> CHANGE ME </h1>
+	
+	<!-- EXTERNAL -->
+	<script src="script.js"></script>
+	<!-- INTERNAL -->
+	<script type="text/javascript">
+		
+		var userInfo = prompt("Enter color");
+
+		console.log("Hello " + userInfo); 
+
+		document.body.bgColor = userInfo;
+		
+		document.getElementById("display").
+			innerHTML = "You have been altered";
+
+		document.getElementById("display").style
+			.fontSize = "98px";
+	</script>
+</body>
+</html>
