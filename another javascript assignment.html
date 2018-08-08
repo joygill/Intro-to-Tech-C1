@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h3 id="display"></h3>
+<input id=box type="text" placeholder="" Enter name="">
+<input type="button" value="Display Formatted Name" onclick="JG()">
+
+<p>When button is clicked name should be displayed with Capital First Letter and lowercase for th rest of the letters</p>
+
+<!--
+
+	There are two ways to approach this function
+
+	Joygill way
+	I need an onclick event listener
+
+	Then I need to get the value from textbox
+		give textbox an id
+		use document.getElementById().Value to get the value
+			
+			Joygill Way (JG)
+			tell the computer to 'text-transform' the text to 'capitalize'
+			then display this version in h3
+
+		Knowledge House (KH)
+		Get the first character from the value
+		Turn it uppercase
+		Turn the rest of the letters lowercase
+		Display the result
+
+	 -->
+
+
+<script type="text/javascript">
+	
+ //function KH(){
+ 		//var value = 
+ 		//document.getElementById('box').value;
+
+ 		// value.charAt(0).toUpperCase() // take the 1st character of the string anc make it uppercase
+ 		// advanced version 
+ 		// var result = value[0].toUpperCase() + value.substr(1).toLowerCase();
+ 		// document.getElementById('display').innerHTML = result;}
+	
+function JG(){
+ 	
+ 		document.getElementById('box').value.style.text-transform = capitalize;}
+
+	 document.getElementById("display").
+			 innerHTML = "Hi " + value;
+
+</script>
+</body>
+</html>

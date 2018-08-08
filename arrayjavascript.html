@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<H1> Array Things</H1>
+<H3 id="display"></H3>
+<input id="entry" type="text">
+<input id="add" type="button" value="Add to Array" onclick="addList()">
+<input id="remove" type="button" value="Remove from Array" onclick="eraseList()">
+
+<p>
+	
+	When buttn is clicked, add new element to array and display the elements on the screen
+
+	Algortihm / steps + substeps
+
+	Add OnClick to button
+	Create function
+
+	Create Array
+
+
+	GEt value from Array
+		give text input id
+		document.getElementById('').value; to get the value
+
+	Add vAlue to array
+
+	Display elements of array and say total amount of elements
+
+	<!--
+
+	Add a new button that Removes the first item and gives the length
+
+		Create New Button in Html
+			Give onclick
+			Give id  to both buttons 
+		Create Function to remove the first value from an array and give the total remaining
+			use shift()
+
+-->
+
+
+
+</p>
+
+
+
+
+<script type="text/javascript">
+	//array , we can leave it blank since we wll be adding elements
+	var fruits = [];
+
+		function addList(){
+			var value = document.getElementById('entry').value;
+
+			// Add value to array
+			fruits.push(value);
+
+			// Display Array as string in H3 and seperate the elements by the vert line and quotes place in the parentheses
+			document.getElementById('display').innerHTML = 
+			fruits.join(' | ') + '<br> The total amount of fruits I have is ' + fruits.length;
+
+		}
+
+		function eraseList(){
+				//remove first value from array
+				fruits.shift();
+				
+
+				//display new amount
+				document.getElementById('display').innerHTML = fruits.join(' | ') + '<br> The total amount of fruits I have is ' + fruits.length;			
+			
+		}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+
+<!-- [known brand] is making a juice bar where you can use whatever
+fruit you like
+● Consider the following array:
+○ var fruits = [“apple”, “orange”, “kiwi”];
+● Create a button that when clicked
+	Create button
+	Add onclick prompt
+○ Prompts user for new fruit and adds it to the array
+	Get value from user 
+	Add to array
+○ Sort the array
+○ Display elements separated by “ with ” on the web page -->
+
+<h1 id= "display"></h1>
+
+
+<input type="button" value="Add fruit" onclick="newFruit()">
+
+<script type="text/javascript">
+
+	var fruits = ['apple', 'orange', 'kiwi'];
+
+	function newFruit(){
+
+		
+
+		var response = prompt("What's your favorite Fruit");
+
+		fruits.push(response);
+		fruits.sort();
+
+
+
+		document.getElementById('display').innerHTML = 
+			fruits.join(" 'with' ");
+	}
+
+</script>
+
+</body>
+
+</html>

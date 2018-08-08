@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+<H3 id="display"></H3>
+
+<input type="button" value="Next Number" onclick="addFib()">
+
+<hr>
+<h1> Fibonacci Numbers</h1>
+
+<p>
+	Add the last two numbers in the sequence to get the new number. 
+	0, 1
+	0, 1, 1
+	0, 1, 1, 2
+	0, 1, 1, 2, 3
+	0, 1, 1, 2, 3, 5
+	0, 1, 1, 2, 3, 5, 8
+	When button is clicked, 
+		calculate the next number in the sequence 
+		add that number to the end of the array
+		display elements of array
+</p>
+
+
+
+
+<script type="text/javascript">
+	
+		var fib = [0, 1];
+		
+		
+
+		function addFib(){
+			//fib.length-1 by itself gives you amount of integers in your sequence and returns that #
+			// fib[fib.length-1] asks for the specific value at the position of the last interger
+			// fib =[0,1,1,2,3,]
+			// fib.length-1 will tell you that you have '4' values in your sequence
+			// fib[fib.length-1] will tell you what the 4th value is '3'
+			var x = fib[fib.length-1]; 
+
+			var y = fib[fib.length-2];
+
+			var value= x + y;
+
+			// add value to array
+			fib.push(value);
+
+			document.getElementById('display').innerHTML = 
+			fib.join(' | ') + '<br> The total amount of fruits I have is ' + fib.length;
+
+
+		}
+
+
+</script>
+</body>
+</html>
