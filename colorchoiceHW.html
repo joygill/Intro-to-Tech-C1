@@ -22,22 +22,22 @@
 
 	 		//console.log(color[i]);
 
-	 		if  (i < 7 && i > 2){ console.log ((i + 1) + o[0] + " choice is " + color[i]); 
+	 		if  (i > 2){ console.log ((i + 1) + o[0] + " choice is " + color[i]); 
 	 			document.getElementById('display').innerHTML += (i + 1) + o[0] + " choice is " + color[i] + '<br>';
 	 		}
 
 	 		else if (i == 0){console.log(1 + o[1] + " choice is " + color[i]);
-	 		document.getElementById('display').innerHTML += 1 + o[1] + " choice is " + color[i] + '<br>';
+	 		document.getElementById('display').innerHTML += (i + 1) + o[1] + " choice is " + color[i] + '<br>';
 	 	}
 
 	 		else if (i == 1){
 	 			console.log(2 + o[2]  + " choice is " +color[i] );
-	 			document.getElementById('display').innerHTML += 2 + o[2]  + " choice is " +color[i] + '<br>' ;
+	 			document.getElementById('display').innerHTML += (i + 1) + o[2]  + " choice is " +color[i] + '<br>' ;
 	 		}
 
 	 		else if (i == 2){
 	 			console.log(3 + o[3] + " choice is " + color[i]);
-	 			document.getElementById('display').innerHTML+= 3 + o[3] + " choice is " + color[i] + '<br>';
+	 			document.getElementById('display').innerHTML+= (i + 1) + o[3] + " choice is " + color[i] + '<br>';
 	 			} 
 	 			}	
 
