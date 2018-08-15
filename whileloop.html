@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h3 id='display'></h3>
+
+<!--script>
+	
+	// Count out all numbers up to 10 adding 1, while loop
+	//start the loop
+	var count = 1;
+	//loop condition
+	while(count <=10){
+		//print count
+		console.log(count);
+		//increase the increment by 1 "++" is the same '+ 1"
+		// += is same as "count" = count + 2 
+		count += 2;
+
+	}
+
+</script-->
+
+<!--script>
+	
+var count = 10;
+	//loop conditon
+	while(count >=1){
+		//print count result
+		console.log(count);
+		// -- is same as "- 1"
+		count --;
+
+	}
+
+</script-->
+
+<script>
+	console.log("------------");
+	var count=1;
+	while(count <=100){
+
+		if (count % 2 == 0) {
+		console.log(count + "is even");
+		document.getElementById('display').innerHTML += count + " is even <br>";
+		}
+
+		else{
+			console.log(count + "is odd");
+			document.getElementById('display').innerHTML += count + " is odd <br>";
+		}
+		
+		count++;
+	}
+
+
+</script>
+
+</body>
+</html>

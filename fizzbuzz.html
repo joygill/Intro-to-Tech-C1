@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!-- Fizz Buzz -->
+<h2 id="buzz"></h2>
+<h2 id="fizz"></h2>
+<h2 id="fizzbuzz"></h2>
+<script>
+	
+
+
+	console.log("------------");
+	var count=1;
+	while(count <=100){
+
+		if (count % 3 == 0 && count % 5 == 0 ) {
+		//console.log(count + "is even");
+		document.getElementById('buzz').innerHTML += count + " fizzbuzz <br>";
+		}
+
+		else if(count % 3 == 0){
+			//console.log(count + "is odd");
+			document.getElementById('buzz').innerHTML += count + " fizz <br>";
+		}
+
+		else if(count % 5 == 0 ){
+			//console.log(count + "is odd");
+			document.getElementById('buzz').innerHTML += count + " Buzz <br>";
+		}
+		 else{
+
+		 	document.getElementById('buzz').innerHTML += count + "<br>";
+		 }
+		count++;
+	}
+</script>
+
+</body>
+</html>
