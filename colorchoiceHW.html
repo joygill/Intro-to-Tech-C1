@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h3 id = "display"></h3>
+
+<script>
+
+// Display the colors on the web page in the following way : "1st choice is Blue .", "2nd choice is Green.", "3rd choice is Red.", "4th choice is Orange.", etc
+
+// we have to attach 'st' to #1, 'nd' to #2, 'rd' to #3, and 'th' to #4 and rest of te numbers
+
+// we can use a for loop with an if else statement 
+	 var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+
+	 var o = ["th", "st", "nd", "rd"];
+
+	 for( var i = 0; i < color.length; i++){
+
+	 		//console.log(color[i]);
+
+	 		if  (i < 7 && i > 2){ console.log ((i + 1) + o[0] + " choice is " + color[i]); 
+	 			document.getElementById('display').innerHTML += (i + 1) + o[0] + " choice is " + color[i] + '<br>';
+	 		}
+
+	 		else if (i == 0){console.log(1 + o[1] + " choice is " + color[i]);
+	 		document.getElementById('display').innerHTML += 1 + o[1] + " choice is " + color[i] + '<br>';
+	 	}
+
+	 		else if (i == 1){
+	 			console.log(2 + o[2]  + " choice is " +color[i] );
+	 			document.getElementById('display').innerHTML += 2 + o[2]  + " choice is " +color[i] + '<br>' ;
+	 		}
+
+	 		else if (i == 2){
+	 			console.log(3 + o[3] + " choice is " + color[i]);
+	 			document.getElementById('display').innerHTML+= 3 + o[3] + " choice is " + color[i] + '<br>';
+	 			} 
+	 			}	
+
+</script>
+</body>
+</html>

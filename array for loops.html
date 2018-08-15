@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h3 id = "display"></h3>
+	<ul id ="colors"></ul>
+
+
+<!-- for loops through arrays -->
+<!--script>
+
+console.log("--------");
+ var weathers = ['rainy', 'sunny', 'moist', 'humid', 'awesome'];
+ // our array count is 5, we want i to be the index for the array and count through each number in the array, we want it to be less than the length of the array because we only have 4 options so i=4, prints 'awesome', but i = 5 will be 'undefined' weathers[i] goes through the array as i corresponds to each number
+for(var i = 0; i < weathers.length; i++){
+	console.log(weathers[i]);
+ }
+ 	// for each element in color array
+ 		// create <li> for the <ul> with id = colors
+ 		// get that <li> the corresponding color of the element and style with that color
+ var color = ['blue', 'red', 'green', 'skyblue', 'purple', 'magenta'];
+
+ for (var i =0; i < color.length; i++){
+ 	document.getElementById('colors').innerHTML += '<li style="color: '+ color[i] + '">' + color[i] + '</li>';
+
+
+ 	// this is the longer form version of the same code above 
+ 	//var li = document.createElement('li');
+ 	//	li.innerHTML = color[i];
+	//	li.style.color = color[i];
+	//	document.getElementById('colors').appendChild(li);
+	 }
+	 </script-->
+
+
+
+<script>
+
+
+	 var names = ['Mathilde', 'Rich', 'Janitza', 'Mike', 'Joe', 'Ronny', 'Rico', 'Moo', 'John', 'Mark' ];
+	 var stat = ['Great', 'Fair', 'Cool'];
+
+	 // if it starts with J, they are great
+	 // if it starts with an R, they are fair
+	 // if it starts with an M, they are cool
+
+	 for( var i = 0; i < names.length; i++){
+
+		
+			if (names[i].charAt(0) == "J"){
+				console.log(names[i] + "is " + stat[0])
+			}
+
+			else if (names[i].charAt(0) == "R"){
+				console.log(names[i] + " is " + stat[1])
+			}
+
+			else if (names[i].charAt(0) == "M"){
+				console.log(names[i] + " is " + stat[2])
+			}
+
+
+	 }
+	 </script>
+</body>
+</html>
