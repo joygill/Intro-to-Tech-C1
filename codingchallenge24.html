@@ -6,29 +6,25 @@
 <body>
 <script>
   
-function isIsogram(str) {
-  //if empty return true.
-  if (str.isEmpty) {
-    return true;
-  } else {
-    // convert string lower case.
-    str = str.toLowerCase();
-  }
-  //split string into individual chars. 
-  var array = str.split('');
-  var sortArr = array.slice().sort();
 
-  for (var i = 0; i < array.length; i++) {
-    //if duplicate is found return false.
-    if (sortArr[i + 1] == sortedArr[i]) {
-      return false;
-    }
-  }
-
-  //else return true
-  return true;
+  function isIsogram(str){
+    //declare two variables
+   var i, g;
+    // convert string to lowercase to prevent tripping up on cases
+       str = str.toLowerCase();
+       // go through the array once from 0
+   for(i = 0; i < str.length; ++i) {
+    // go through the array again starting from 1, looking for g  
+     for(g = i + 1; g < str.length; ++g) {
+        // if i and g are exactly the same at any point in the array return false
+       if(str[i] === str[g]) {
+         return false;
+       }
+     }
+   }
+   // if none of the characters repeat return true
+   return true;
 }
-
 </script>
 
 
