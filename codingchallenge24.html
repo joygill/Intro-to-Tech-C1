@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script>
+  
+function isIsogram(str) {
+  //if empty return true.
+  if (str.isEmpty) {
+    return true;
+  } else {
+    // convert string lower case.
+    str = str.toLowerCase();
+  }
+  //split string into individual chars. 
+  var array = str.split('');
+  var sortArr = array.slice().sort();
+
+  for (var i = 0; i < array.length; i++) {
+    //if duplicate is found return false.
+    if (sortArr[i + 1] == sortedArr[i]) {
+      return false;
+    }
+  }
+
+  //else return true
+  return true;
+}
+
+</script>
+
+
+</body>
+</html>
