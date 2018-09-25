@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+</head>
+<body>
+
+
+<h1 id='text'> </h1>
+
+
+
+<script>
+	
+	//Consider the following array
+var library = [
+ { author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true },
+ { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true },
+ { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false } ];
+
+
+
+
+ function changeText () { 
+for(var i = 0; i < library.length; i++){ 
+
+if (library[i].readingStatus == true)
+
+	{document.getElementById('text').innerHTML += "Already read " + library[i].title + ' by ' + library[i].author + '<br>'; 
+
+
+}
+
+else {document.getElementById('text').innerHTML += " You still need to read " + library[i].title + ' by ' + library[i].author;
+
+	}
+		}
+			}
+
+changeText();
+</script>
+
+</body>
+</html>
