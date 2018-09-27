@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Restaurant Menu</title>
+	</head>
+	<body>
+		<div class="container-div">
+    <div class="container left">
+      <div class="row">
+        <!--Menu-->
+        <div class="col-5">
+          <h1>Menu</h1>
+      <!--Create name of Note-->
+            <input id="name" type="text" placeholder="Enter Name">
+      <!--Select Importance of Note by color-->
+              <select id="menu">
+              <option>-Menu-</option>
+              <option value="chicken">Chicken</option>
+              <option value="gravy">Gravy</option>
+              <option value="cucumber">Cucumber</option>
+              </select>
+                <input type="button" value="Hungry?" onclick="makeOrder()">
+
+                <h3 id="reviewOrder"></h3>
+
+		<script src="http://cdn.jsdelivr.net/alasql/latest/alasql.min.js"></script>
+		<script>
+			var db = new alasql.Database();
+			db.exec("CREATE TABLE menu (id int PRIMARY KEY, name varchar(255), time int, food varchar(255))");
+			db.exec("CREATE TABLE users (id int PRIMARY KEY, username varchar(255), orderTime int)");
+			db.exec("CREATE TABLE track (id int PRIMARY KEY, mid int, uid int)");
+			
+			
+			
+			console.log( db.exec( 'SELECT * FROM menu'))
+			function makeOrder(){
+				var id = db.exec('SELECT * FROM menu').length;
+			  	var food = document.getElementById("menu").value;
+			  	var name = document.getElementById("name").value; 
+			  	var date = new Date().toString();
+			  	var order = db.exec(`INSERT INTO menu VALUES(${id}, "${name}", "${date}" ,"${food}")`);
+			  	for(var i=0; i < order.length; i++){
+			  		var user = db.exec(`INSERT INTO users VALUES(${order[i].id}, "${order[i].name}", "${order[i].date}")`);
+			  	}
+			  	console.log(user);
+				document.getElementById("reviewOrder").innerHTML = food;
+			}
+			
+		</script>
+	</body>
+</html>
